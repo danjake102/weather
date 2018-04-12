@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+    
+    <script type="text/javascript" src="app.js" ></script>
+</head>
+<body></body>
+    <div class="container">
+            <div class="header">
+                    <h1 class="center-align">Weather Forecast</h1>
+            </div>
+            <div class="container" style="width: 55%">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" id="city" style="width: 75%;">
+                            <label for="city">Input City Name</label>
+                            <a class="btn btn-floating btn-large pulse">
+                                <i id="search" class="small material-icons" onclick="getbyCityName()">search</i>
+                            </a>
+                            <a class="btn btn-floating btn-large pulse">
+                                <i id="loca" class="material-icons" onclick="getLocation()">my_location</i>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <h1 id="demo" class="center-align"></h1>
+                    <h5 id="loc" class="center-align"></h5>
+                    <div class="container" style="width: 50%;">
+                        <div class="row" id="weatherInfo" style="display: none">
+                            <div class="col s6" style="text-align:center;">
+                                <b><p id="temp" style="font-size:32px; margin-bottom: 0;"> </p></b>
+                                <img src="imgs/humidity.png" height="16px" />
+                                <span id="hum"></span> <br>
+                                <span id="wind"></span> mph<span id="direction"></span>
+                            </div>
+                    
+                            <div class="col s6" style="text-align:center;">
+                                <img id="icon" width="75px"/>  
+                                <b><p id="desc"></p></b>
+                            </div>
+                        </div>
+                    </div>
+        </div>               
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>   
+    <script type="text/javascript" >
+        document.getElementById("search").style.cursor = "pointer";
+    </script>
+</body>
+</html>
